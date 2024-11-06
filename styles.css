@@ -1,0 +1,38 @@
+/* Style for the body and canvas */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Hide scrollbars */
+    background-image: url('background.jpg');
+    background-size: cover;  /* Ensure the background image covers the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Ensure the body takes full viewport height */
+}
+
+
+/* Full screen SVG canvas */
+#svgCanvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: transparent;  /* Make the canvas transparent */
+}
+
+/* Circle transition effect */
+.circle {
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.5) rotate(45deg);
+    cursor: pointer;
+}
+
+/* Custom animation for scaling and color change */
+@keyframes scaleCircle {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.8); }
+    100% { transform: scale(1); }
+}
